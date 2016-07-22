@@ -60,17 +60,17 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
 
-  var ultraSum = sum((sum(a,b)[0]), c)[0];
-  var message = a + ' and ' + b + ' and ' + c + ' sum to ' + ultraSum + '.';
-  var ultraMult = multiply((multiply(a,b)[0]), c)[0];
-  var message1 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + ultraMult + '.';
-  return [ultraSum, message, message1, ultraMult];
+  var hyperSum = sum((sum(a,b)[0]), c)[0];
+  var message = a + ' and ' + b + ' and ' + c + ' sum to ' + hyperSum + '.';
+  var hyperMult = multiply((multiply(a,b)[0]), c)[0];
+  var message1 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + hyperMult + '.';
+  return [hyperSum, message, message1, hyperMult];
 }
 //
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
 
-/*First Solution-- less dry, but it was ours, dammit! */
+/*First Solution-- less DRY, but it was ours, dammit! */
 
 // function sumAndMultiply(a,b,c){
 //   var sumOne = sum(a,b)[0];
@@ -107,16 +107,20 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
+//  Worked on with Lee, Adrian, and Britt!
+
 // Write your code here
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-
+  var ultraSum = sum((sum(testArray[0],testArray[1])[0]), testArray[2])[0];
+  var message = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + ultraSum + ' is their sum.';
+  return [ultraSum, message];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
