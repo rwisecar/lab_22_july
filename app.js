@@ -11,8 +11,8 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a,b){ //eslint-disable-line
   var output = a + b;
   var message = 'The sum of ' + a + ' and ' + b + ' is ' + output + '.';
-  // console.log('The sum of 4 and 7 is 11. is the expected output.');
-  // console.log(message + ' is the actual output.');
+  console.log('The sum of 4 and 7 is 11. is the expected output.');
+  console.log(message + ' is the actual output.');
   return [output, message];
 }
 
@@ -31,11 +31,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a,b){ //eslint-disable-line
-  var multOutput = a * b;
+  var output1 = a * b;
   var message1 = ('The product of ' + a + ' and ' + b + ' is 45.');
   console.log('The product of 5 and 9 is 45. is the expected output.');
   console.log(message1 + ' is the actual output.');
-  return [multOutput, message1];
+  return [output1, message1];
 
 }
 
@@ -55,13 +55,45 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
+//Worked on this with Adrian, Lee, and Britt!
+
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
 
+  var ultraSum = sum((sum(a,b)[0]), c)[0];
+  var message = a + ' and ' + b + ' and ' + c + ' sum to ' + ultraSum + '.';
+  var ultraMult = multiply((multiply(a,b)[0]), c)[0];
+  var message1 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + ultraMult + '.';
+  return [ultraSum, message, message1, ultraMult];
 }
-
+//
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
+
+/*First Solution-- less dry, but it was ours, dammit! */
+
+// function sumAndMultiply(a,b,c){
+//   var sumOne = sum(a,b)[0];
+//   console.log(sumOne);
+//   var sumTwo = sum(sumOne,c)[0];
+//   console.log(sumTwo);
+//   var message = a + ' and ' + b + ' and ' + c + ' sum to ' + ultraSum + '.';
+//   console.log('4 and 7 and 5 sum to 16. is the expected output.');
+//   console.log(message + ' is the actual output.');
+//
+//   var multOne = multiply(a,b)[0];
+//   console.log(multOne);
+//   var multTwo = multiply(multOne,c)[0];
+//   console.log(multTwo);
+//   var message1 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + ultraMult + '.';
+//   console.log('The product of 4 and 7 and 5 is 140. is the expected output');
+//   console.log(message1 + ' is the actual output.');
+//
+//   return [sumTwo, message, message1, multTwo];
+//
+// }
+
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
